@@ -16,7 +16,6 @@
         <Button x:Name="btnRegistrar" Click="btnRegistrar_Click" Content="Registrar" Margin="224,349,696,219"/>
         <Button x:Name="btnActualizar" Click="btnActualizar_Click" Content="Actualizar" Margin="390,349,530,219"/>
         <Button x:Name="btnEliminar" Click="btnEliminar_Click" Content="Eliminar" Margin="549,349,371,219"/>
-        <ListBox x:Name="lstEstudiantesExistentes" SelectionChanged="lstEstudiantesExistentes_SelectionChanged" Margin="18,398,29,10"/>
         <Button x:Name="btnLimpiar" Click="btnLimpiar_Click" Content="Limpiar" Margin="697,349,223,219"/>
         <Label x:Name="lblNombre" Content="Nombre" VerticalAlignment="Center" Margin="18,92,949,477" Height="27"/>
         <Label x:Name="lblApellido" Content="Apellido" VerticalAlignment="Center" Margin="492,94,472,476" Height="26"/>
@@ -31,9 +30,13 @@
         <TextBox x:Name="txtTelefono" Margin="121,152,596,408"/>
         <TextBox x:Name="txtMail" Margin="621,148,96,411"/>
         <TextBox x:Name="txtDireccion" Margin="121,219,596,341"/>
-        <TextBox x:Name="txtSexo" Margin="622,215,223,344"/>
         <TextBox x:Name="txtCelular" Margin="121,284,596,275"/>
-        <TextBox x:Name="txtFechaNac" Margin="622,284,223,275"/>
+        <DataGrid x:Name="DgvEstuExistentes" HorizontalAlignment="Left" Height="192" Margin="18,394,0,0" VerticalAlignment="Top" Width="993"/>
+        <DatePicker x:Name="DtpFecNac" HorizontalAlignment="Left" Height="37" Margin="622,284,0,0" VerticalAlignment="Top" Width="191"/>
+        <ComboBox x:Name="cboSexo" HorizontalAlignment="Left" Height="36" Margin="622,216,0,0" VerticalAlignment="Top" Width="191">
+            <ComboBoxItem>Femenino</ComboBoxItem>
+            <ComboBoxItem>Masculino</ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>

@@ -19,9 +19,51 @@ namespace MAFRANFER_WPF
     /// </summary>
     public partial class Estudiante : Window
     {
+
+        cursos_onlineEntities datos;
+
         public Estudiante()
         {
             InitializeComponent();
+
+            datos = new cursos_onlineEntities();
+
+        }
+
+        private void CargarDatosGrilla()
+        {
+            try
+            {
+
+                DgvEstuExistentes.ItemsSource = datos.estudiante.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnRegistrar_Click(object sender, RoutedEventArgs e)
+        {
+            estudiante estu = new estudiante();
+
+            estu.nro_documento = txtNroDoc.Text;
+            estu.tipo_documento = txtTipoDoc.Text;
+            estu.nombre = txtNombre.Text;
+            estu.apellido = txtApellido.Text;
+            estu.direccion = txtDireccion.Text;
+            estu.email = txtMail.Text;
+            estu.sexo = (string)cboSexo.SelectedItem;
+            estu.telefono = txtTelefono.Text;
+            estu.celular = txtCelular.Text;
+            estu.fecha_nacimiento = (DateTime)DtpFecNac.SelectedDate;
+
+
+            datos.estudiante.Add(estu);
+            datos.SaveChanges();
+            CargarDatosGrilla();
+
         }
     }
 }
