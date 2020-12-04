@@ -1,0 +1,39 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MAFRANFER_WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="MAFRANFER_WPF.Estudiante"
+        mc:Ignorable="d"
+        Title="Estudiante" Height="625.74" Width="1042.031">
+    <Grid RenderTransformOrigin="0.492,0.509">
+        <Label x:Name="lblNroDoc" Content="Nro Documento" VerticalAlignment="Center" Margin="15,31,920,542" Height="23"/>
+        <Label x:Name="lblTipoDoc" Content="Tipo Documento" VerticalAlignment="Center" Margin="489,36,445,538" Height="22"/>
+
+        <TextBox x:Name="txtNroDoc" IsEnabled="False" Margin="121,27,780,534"/>
+        <TextBox x:Name="txtTipoDoc" Margin="619,22,98,537"/>
+        <Button x:Name="btnRegistrar" Click="btnRegistrar_Click" Content="Registrar" Margin="224,349,696,219"/>
+        <Button x:Name="btnActualizar" Click="btnActualizar_Click" Content="Actualizar" Margin="390,349,530,219"/>
+        <Button x:Name="btnEliminar" Click="btnEliminar_Click" Content="Eliminar" Margin="549,349,371,219"/>
+        <ListBox x:Name="lstEstudiantesExistentes" SelectionChanged="lstEstudiantesExistentes_SelectionChanged" Margin="18,398,29,10"/>
+        <Button x:Name="btnLimpiar" Click="btnLimpiar_Click" Content="Limpiar" Margin="697,349,223,219"/>
+        <Label x:Name="lblNombre" Content="Nombre" VerticalAlignment="Center" Margin="18,92,949,477" Height="27"/>
+        <Label x:Name="lblApellido" Content="Apellido" VerticalAlignment="Center" Margin="492,94,472,476" Height="26"/>
+        <Label x:Name="lblDireccion" Content="Dirección" VerticalAlignment="Center" Margin="18,224,949,344" Height="28"/>
+        <Label x:Name="lblCelular" Content="Celular" VerticalAlignment="Center" Margin="18,290,949,279" Height="27"/>
+        <Label x:Name="lblTelefono" Content="Telefono" VerticalAlignment="Center" Margin="18,152,949,417" Height="27"/>
+        <Label x:Name="lblMail" Content="Mail" VerticalAlignment="Center" Margin="491,158,476,411" Height="27"/>
+        <Label x:Name="lblSexo" Content="Sexo" VerticalAlignment="Center" Margin="489,226,478,342" Height="28"/>
+        <Label x:Name="lblFechaNac" Content="Fecha de Nacimiento" VerticalAlignment="Center" Margin="491,289,419,279" Height="28"/>
+        <TextBox x:Name="txtNombre" Margin="121,86,596,473"/>
+        <TextBox x:Name="txtApellido" Margin="620,83,97,477"/>
+        <TextBox x:Name="txtTelefono" Margin="121,152,596,408"/>
+        <TextBox x:Name="txtMail" Margin="621,148,96,411"/>
+        <TextBox x:Name="txtDireccion" Margin="121,219,596,341"/>
+        <TextBox x:Name="txtSexo" Margin="622,215,223,344"/>
+        <TextBox x:Name="txtCelular" Margin="121,284,596,275"/>
+        <TextBox x:Name="txtFechaNac" Margin="622,284,223,275"/>
+
+    </Grid>
+</Window>
