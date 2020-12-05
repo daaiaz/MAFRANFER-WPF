@@ -30,5 +30,11 @@ namespace MAFRANFER_WPF
             Estudiante est = new Estudiante();
             est.Show();
         }
+
+        private void CursoItem_Click(object sender, RoutedEventArgs e)
+        {
+            w_Curso c = new w_Curso();
+            c.Show();
+        }
     }
 }

@@ -1,0 +1,33 @@
+﻿<Window x:Class="MAFRANFER_WPF.w_Curso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MAFRANFER_WPF"
+        mc:Ignorable="d"
+        Title="Curso" Height="625.74" Width="1042.031" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid RenderTransformOrigin="0.492,0.509">
+        <Button x:Name="btnRegistrar" Click="btnRegistrar_Click" Content="Registrar" Margin="205,220,715,348"/>
+        <Button x:Name="btnActualizar" Click="btnActualizar_Click" Content="Actualizar" Margin="371,220,549,348"/>
+        <Button x:Name="btnEliminar" Click="btnEliminar_Click" Content="Eliminar" Margin="530,220,390,348"/>
+        <Button x:Name="btnLimpiar" Click="btnLimpiar_Click" Content="Limpiar" Margin="678,220,242,348"/>
+        <Label x:Name="lblDescripcion" Content="Descripcion" VerticalAlignment="Center" Margin="18,41,920,529" Height="27" RenderTransformOrigin="0.348,-1.759"/>
+        <Label x:Name="lblDuracion" Content="Duracion" VerticalAlignment="Center" Margin="18,94,946,477" Height="26"/>
+        <Label x:Name="lblPrecio" Content="Precio" VerticalAlignment="Center" Margin="501,135,466,435" Height="27"/>
+        <Label x:Name="lblEstado" Content="Estado" VerticalAlignment="Center" Margin="19,137,948,432" Height="28"/>
+        <Label x:Name="lblFechaInicio" Content="Fecha de Inicio" VerticalAlignment="Center" Margin="498,43,412,526" Height="28"/>
+        <Label x:Name="lblFechaFin" Content="Fecha de Fin" VerticalAlignment="Center" Margin="498,76,440,493" Height="28"/>
+        <TextBox x:Name="txtDescripcion" Margin="121,36,596,523"/>
+        <TextBox x:Name="txtDuracion" Margin="121,94,596,466"/>
+        <TextBox x:Name="txtPrecio" Margin="601,135,116,424"/>
+        <DataGrid x:Name="DgvCursosExistentes" HorizontalAlignment="Left" Height="286" Margin="18,280,0,0" VerticalAlignment="Top" Width="993" MouseDoubleClick="DgvCursosExistentes_MouseDoubleClick"/>
+        <DatePicker x:Name="DtpFecInicio" HorizontalAlignment="Left" Height="37" Margin="603,34,0,0" VerticalAlignment="Top" Width="191"/>
+        <DatePicker x:Name="DtpFecFin" HorizontalAlignment="Left" Height="37" Margin="603,77,0,0" VerticalAlignment="Top" Width="191"/>
+        <ComboBox x:Name="cboEstado" HorizontalAlignment="Left" Margin="121,137,0,0" VerticalAlignment="Top" Width="170" Height="36">
+            <ComboBoxItem>No iniciado</ComboBoxItem>
+            <ComboBoxItem>Iniciado</ComboBoxItem>
+            <ComboBoxItem>Finalizado</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Window>

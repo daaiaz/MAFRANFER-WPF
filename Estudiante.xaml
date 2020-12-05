@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MAFRANFER_WPF"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="MAFRANFER_WPF.Estudiante"
         mc:Ignorable="d"
-        Title="Estudiante" Height="625.74" Width="1042.031" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Estudiante_Loaded">
+        Title="Estudiante" Height="625.74" Width="1042.031" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.492,0.509">
         <Label x:Name="lblNroDoc" Content="Nro Documento" VerticalAlignment="Center" Margin="15,31,920,542" Height="23"/>
         <Label x:Name="lblTipoDoc" Content="Tipo Documento" VerticalAlignment="Center" Margin="489,36,445,538" Height="22"/>
