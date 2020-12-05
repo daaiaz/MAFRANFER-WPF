@@ -24,5 +24,11 @@ namespace MAFRANFER_WPF
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Estudiante est = new Estudiante();
+            est.Show();
+        }
     }
 }

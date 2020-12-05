@@ -59,6 +59,7 @@
                 </TransformGroup>
             </Grid.RenderTransform>
             <StackPanel>
+                
                 <Image Height="140" Source="mafranferlogo.png"/>
                 <ListView Foreground="#FF313131" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="309" Margin="0,0,-0.4,0">
                     <ListViewItem Height="45" Padding="0">
@@ -70,8 +71,9 @@
 
                     <ListViewItem Height="45" Padding="0">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind ="PeopleCheck" Width="20" Height="20" Foreground="Red" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Estudiantes" Margin="10"/>
+                            <materialDesign:PackIcon Kind ="People" Width="20" Height="20" Foreground="Blue" Margin="5" VerticalAlignment="Center"/>
+                            <MenuItem Header="Estudiantes" Click="MenuItem_Click" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+
                         </StackPanel>
                     </ListViewItem>
 
@@ -95,13 +97,7 @@
                             <TextBlock Text="Ayuda" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
-
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind ="Settings" Width="20" Height="20" Foreground="Blue" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Configuración" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
+                    
                 </ListView>
             </StackPanel>
             <Button x:Name="ButtonClose" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
