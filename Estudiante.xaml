@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:MAFRANFER_WPF"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="MAFRANFER_WPF.Estudiante"
         mc:Ignorable="d"
-        Title="Estudiante" Height="625.74" Width="1042.031" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Estudiante" Height="625.74" Width="1042.031" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Estudiante_Loaded">
     <Grid RenderTransformOrigin="0.492,0.509">
         <Label x:Name="lblNroDoc" Content="Nro Documento" VerticalAlignment="Center" Margin="15,31,920,542" Height="23"/>
         <Label x:Name="lblTipoDoc" Content="Tipo Documento" VerticalAlignment="Center" Margin="489,36,445,538" Height="22"/>
 
         <TextBox x:Name="txtNroDoc" IsEnabled="True" Margin="121,27,780,534"/>
-        <TextBox x:Name="txtTipoDoc" Margin="619,22,98,537"/>
+        <ComboBox x:Name="cboTipoDoc" HorizontalAlignment="Left" Margin="619,22,98,537" VerticalAlignment="Top" Width="170" Height="36">
+            <ComboBoxItem>CI</ComboBoxItem>
+            <ComboBoxItem>Pasaporte</ComboBoxItem>
+        </ComboBox>
         <Button x:Name="btnRegistrar" Click="btnRegistrar_Click" Content="Registrar" Margin="224,349,696,219"/>
         <Button x:Name="btnActualizar" Click="btnActualizar_Click" Content="Actualizar" Margin="390,349,530,219"/>
         <Button x:Name="btnEliminar" Click="btnEliminar_Click" Content="Eliminar" Margin="549,349,371,219"/>
@@ -33,7 +36,7 @@
         <TextBox x:Name="txtCelular" Margin="121,284,596,275"/>
         <DataGrid x:Name="DgvEstuExistentes" HorizontalAlignment="Left" Height="192" Margin="18,394,0,0" VerticalAlignment="Top" Width="993" MouseDoubleClick="DgvEstuExistentes_MouseDoubleClick"/>
         <DatePicker x:Name="DtpFecNac" HorizontalAlignment="Left" Height="37" Margin="622,284,0,0" VerticalAlignment="Top" Width="191"/>
-        <ComboBox x:Name="cboSexo" HorizontalAlignment="Left" Margin="620,219,0,0" VerticalAlignment="Top" Width="170" Height="36">
+        <ComboBox x:Name="cboSexo" HorizontalAlignment="Left" Margin="620,219,0,0" VerticalAlignment="Top" Width="170" Height="36" SelectionChanged="CboSexo_SelectionChanged">
             <ComboBoxItem>Femenino</ComboBoxItem>
             <ComboBoxItem>Masculino</ComboBoxItem>
         </ComboBox>

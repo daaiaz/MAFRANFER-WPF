@@ -49,12 +49,12 @@ namespace MAFRANFER_WPF
             estudiante estu = new estudiante();
 
             estu.nro_documento = txtNroDoc.Text;
-            estu.tipo_documento = txtTipoDoc.Text;
+            estu.tipo_documento = cboTipoDoc.Text;
             estu.nombre = txtNombre.Text;
             estu.apellido = txtApellido.Text;
             estu.direccion = txtDireccion.Text;
             estu.email = txtMail.Text;
-            estu.sexo = Convert.ToString(cboSexo.SelectedItem);
+            estu.sexo = cboSexo.Text;
             estu.telefono = txtTelefono.Text;
             estu.celular = txtCelular.Text;
             estu.fecha_nacimiento = (DateTime)DtpFecNac.SelectedDate;
@@ -72,13 +72,12 @@ namespace MAFRANFER_WPF
             {
                 estudiante estu = (estudiante)DgvEstuExistentes.SelectedItem;
                 estu.nro_documento = txtNroDoc.Text;
-                estu.tipo_documento = txtTipoDoc.Text;
+                estu.tipo_documento = cboTipoDoc.Text;
                 estu.nombre = txtNombre.Text;
                 estu.apellido = txtApellido.Text;
                 estu.direccion = txtDireccion.Text;
                 estu.email = txtMail.Text;
-                estu.sexo = (string)cboSexo.SelectedItem;
-                //estu.sexo = txtSexo.Text;
+                estu.sexo = cboSexo.Text;
                 estu.telefono = txtTelefono.Text;
                 estu.celular = txtCelular.Text;
                 estu.fecha_nacimiento = (DateTime)DtpFecNac.SelectedDate;
@@ -87,6 +86,7 @@ namespace MAFRANFER_WPF
                 datos.SaveChanges();
 
                 CargarDatosGrilla();
+                limpiarEstudiante();
             }
             else
                 MessageBox.Show("Debe seleccionar un Estudiante de la grilla para modificar!");
@@ -100,7 +100,7 @@ namespace MAFRANFER_WPF
 
 
                 txtNroDoc.Text = estu.nro_documento;
-                txtTipoDoc.Text = estu.tipo_documento;
+                cboTipoDoc.Text = estu.tipo_documento;
                 txtNombre.Text = estu.nombre;
                 txtApellido.Text = estu.apellido;
                 txtDireccion.Text = estu.direccion;
@@ -123,6 +123,7 @@ namespace MAFRANFER_WPF
                 datos.estudiante.Remove(estu);
                 datos.SaveChanges();
                 CargarDatosGrilla();
+                limpiarEstudiante();
             }
             else
                 MessageBox.Show("Debe seleccionar un Estudiante de la grilla para eliminar!");
@@ -130,17 +131,26 @@ namespace MAFRANFER_WPF
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
+            limpiarEstudiante();
+        }
+
+        private void limpiarEstudiante()
+        {
             txtNroDoc.Text = string.Empty;
-            txtTipoDoc.Text = string.Empty;
+            cboTipoDoc.SelectedItem = -1;
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtMail.Text = string.Empty;
             cboSexo.SelectedItem = -1;
-            //txtSexo.Text = string.Empty;
             txtTelefono.Text = string.Empty;
             txtCelular.Text = string.Empty;
             DtpFecNac.SelectedDate = DtpFecNac.DisplayDate;
+        }
+
+        private void CboSexo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
